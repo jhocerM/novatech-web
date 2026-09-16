@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="48" height="48" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Logotipo de NovaTech</title>
+  <desc id="logoDesc">Letra N estilizada dentro de un circuito hexagonal, en tonos naranja y azul oscuro</desc>
+
+  <defs>
+    <linearGradient id="gradFondo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e2438"/>
+      <stop offset="100%" stop-color="#0f1220"/>
+    </linearGradient>
+    <linearGradient id="gradN" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f6a621"/>
+      <stop offset="100%" stop-color="#e67e22"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Marco hexagonal tipo "chip" -->
+  <polygon points="60,6 108,33 108,87 60,114 12,87 12,33"
+           fill="url(#gradFondo)" stroke="#e67e22" stroke-width="3"/>
+
+  <!-- Pines de circuito -->
+  <g stroke="#e67e22" stroke-width="3" stroke-linecap="round">
+    <line x1="60" y1="6" x2="60" y2="-4" class="pin"/>
+    <line x1="108" y1="60" x2="118" y2="60" class="pin"/>
+    <line x1="12" y1="60" x2="2" y2="60" class="pin"/>
+  </g>
+
+  <!-- Letra N estilizada -->
+  <path d="M40 82 V38 L80 82 V38" fill="none" stroke="url(#gradN)"
+        stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Nodo decorativo -->
+  <circle cx="80" cy="38" r="5" fill="#f6a621"/>
+  <circle cx="40" cy="82" r="5" fill="#f6a621"/>
+</svg>

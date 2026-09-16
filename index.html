@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- ===== METADATOS ===== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NovaTech: tienda en línea de accesorios tecnológicos - audífonos, teclados mecánicos y smartwatches, con diseño moderno y responsive.">
+  <meta name="keywords" content="tecnología, audífonos, teclado mecánico, smartwatch, tienda tecnológica, NovaTech">
+  <meta name="author" content="Jhoccer Moncin Lizardo">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <title>NovaTech | Inicio</title>
+
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO Y NAVEGACIÓN ===== -->
+  <header class="site-header">
+    <div class="header-contenedor">
+      <a href="index.html" class="logo">
+        <img src="svg/logo.svg" alt="Logotipo de NovaTech" class="logo-svg">
+        <span>NovaTech</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-principal" id="navPrincipal">
+        <ul>
+          <li><a href="index.html" class="activo">Inicio</a></li>
+          <li><a href="paginas/productos.html">Productos</a></li>
+          <li><a href="paginas/contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO CON VIDEO DE FONDO (con imagen adaptativa como fallback) ===== -->
+    <section class="hero">
+      <video class="hero-video" autoplay muted loop playsinline poster="img/hero-desktop.jpg">
+        <source src="img/vd.mp4" type="video/mp4">
+        <!-- Fallback si el navegador no soporta video -->
+        <picture>
+          <source media="(max-width: 600px)" srcset="img/hero-mobile.jpg">
+          <source media="(max-width: 1000px)" srcset="img/hero-desktop.jpg">
+          <img src="img/hero-desktop.jpg" alt="Escritorio con accesorios tecnológicos NovaTech" class="hero-img">
+        </picture>
+      </video>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-texto">
+        <h1>Tecnología que se adapta a ti</h1>
+        <p>Audífonos, teclados mecánicos y smartwatches pensados para tu día a día.</p>
+        <a href="paginas/productos.html" class="boton boton-primario">Ver productos</a>
+      </div>
+    </section>
+
+    <!-- ===== SECCIÓN "QUIÉNES SOMOS" con figure/figcaption ===== -->
+    <section class="seccion contenedor">
+      <article class="quienes-somos">
+        <figure class="figura-equipo">
+          <img src="img/img1.png" alt="Equipo de trabajo de NovaTech" loading="lazy">
+          <figcaption>El equipo NovaTech diseñando la próxima generación de accesorios.</figcaption>
+        </figure>
+
+        <div class="quienes-somos-texto">
+          <h2>Sobre nosotros</h2>
+          <p>
+            NovaTech nació como un proyecto académico con una idea clara: acercar tecnología
+            útil y bien diseñada a estudiantes y profesionales. Cada producto de nuestro
+            catálogo pasa por un proceso de selección enfocado en calidad, ergonomía y precio justo.
+          </p>
+          <p>
+            Este sitio fue desarrollado con HTML5 y CSS3 semántico, sin plantillas externas,
+            como parte del curso de Diseño Web.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===== TARJETAS DE VALORES CON EFECTOS HOVER ===== -->
+    <section class="seccion contenedor">
+      <h2 class="titulo-centrado">¿Por qué NovaTech?</h2>
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <div class="tarjeta-icono">⚡</div>
+          <h3>Envío rápido</h3>
+          <p>Recibe tus productos en menos de 48 horas dentro de la ciudad.</p>
+        </article>
+        <article class="tarjeta">
+          <div class="tarjeta-icono">🛡️</div>
+          <h3>Garantía real</h3>
+          <p>12 meses de garantía respaldada directamente por NovaTech.</p>
+        </article>
+        <article class="tarjeta">
+          <div class="tarjeta-icono">💬</div>
+          <h3>Soporte cercano</h3>
+          <p>Te ayudamos a elegir el producto correcto antes y después de comprar.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== PIE DE PÁGINA ===== -->
+  <footer class="site-footer">
+    <div class="contenedor footer-contenido">
+      <p>&copy; 2026 NovaTech. Proyecto académico - Diseño Web.</p>
+      <nav class="footer-nav">
+        <a href="index.html">Inicio</a>
+        <a href="paginas/productos.html">Productos</a>
+        <a href="paginas/contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

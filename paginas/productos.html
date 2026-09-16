@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de productos NovaTech: audífonos, teclados mecánicos y smartwatches, con imagen interactiva e imágenes adaptativas.">
+  <meta name="keywords" content="audífonos, teclado mecánico, smartwatch, catálogo, image map">
+  <meta name="author" content="Jhoccer Moncin Lizardo">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>NovaTech | Productos</title>
+
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-contenedor">
+      <a href="../index.html" class="logo">
+        <img src="../svg/logo.svg" alt="Logotipo de NovaTech" class="logo-svg">
+        <span>NovaTech</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-principal" id="navPrincipal">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="productos.html" class="activo">Productos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor pagina-interior">
+    <h1>Nuestros productos</h1>
+    <p class="intro-pagina">
+      Explora el catálogo tocando o pasando el cursor por cada zona de la imagen,
+      o revisa las tarjetas de producto más abajo.
+    </p>
+
+    <!-- ===== IMAGEN INTERACTIVA (image map) ===== -->
+    <section class="seccion-mapa">
+      <h2>Explora por categoría</h2>
+      <img src="../img/img2.png"
+           usemap="#mapaCategorias"
+           alt="Banner con tres categorías de productos: audífonos, teclados y smartwatches"
+           class="imagen-mapa">
+
+      <map name="mapaCategorias">
+        <area shape="rect" coords="0,0,300,300" href="#audifonos"
+              alt="Ir a categoría Audífonos" title="Audífonos">
+        <area shape="rect" coords="300,0,600,300" href="#teclados"
+              alt="Ir a categoría Teclados mecánicos" title="Teclados mecánicos">
+        <area shape="rect" coords="600,0,900,300" href="#smartwatch"
+              alt="Ir a categoría Smartwatches" title="Smartwatches">
+      </map>
+      <p class="nota-mapa">Cada zona del banner es clicable y te lleva directo a esa categoría en esta misma página.</p>
+    </section>
+
+    <!-- ===== CATEGORÍA: AUDÍFONOS ===== -->
+<section class="seccion" id="audifonos">
+  <h2>Audífonos</h2>
+  <div class="tarjetas-productos">
+    <article class="tarjeta-producto">
+      <picture>
+        <img src="../img/img3.png"
+             alt="Audífonos inalámbricos NovaTech Pro" loading="lazy">
+      </picture>
+      <h3>NovaTech Audífonos Pro</h3>
+      <p>Cancelación de ruido activa y 30 horas de batería.</p>
+      <span class="precio">S/ 249.00</span>
+    </article>
+  </div>
+</section>
+
+    <!-- ===== CATEGORÍA: TECLADOS ===== -->
+    <section class="seccion" id="teclados">
+      <h2>Teclados mecánicos</h2>
+      <div class="tarjetas-productos">
+        <article class="tarjeta-producto">
+          <picture>
+            <img src="../img/img0.png"
+                 alt="Teclado mecánico retroiluminado NovaTech" loading="lazy">
+          </picture>
+          <h3>NovaTech Teclado Mecánico X1</h3>
+          <p>Switches táctiles, retroiluminación RGB y estructura de aluminio.</p>
+          <span class="precio">S/ 189.00</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== CATEGORÍA: SMARTWATCH ===== -->
+    <section class="seccion" id="smartwatch">
+      <h2>Smartwatches</h2>
+      <div class="tarjetas-productos">
+        <article class="tarjeta-producto">
+          <picture>
+            <img src="../img/img11.png"
+                 alt="Smartwatch NovaTech X con monitor de ritmo cardiaco" loading="lazy">
+          </picture>
+          <h3>NovaTech SmartWatch X</h3>
+          <p>Monitoreo de ritmo cardiaco, GPS integrado y resistencia al agua.</p>
+          <span class="precio">S/ 329.00</span>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="contenedor footer-contenido">
+      <p>&copy; 2026 NovaTech. Proyecto académico - Diseño Web.</p>
+      <nav class="footer-nav">
+        <a href="../index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

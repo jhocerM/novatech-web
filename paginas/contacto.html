@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacto NovaTech: tabla comparativa de productos y formulario de contacto funcional.">
+  <meta name="keywords" content="contacto, formulario, tabla comparativa, NovaTech">
+  <meta name="author" content="Jhoccer Moncin Lizardo">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>NovaTech | Contacto</title>
+
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-contenedor">
+      <a href="../index.html" class="logo">
+        <img src="../svg/logo.svg" alt="Logotipo de NovaTech" class="logo-svg">
+        <span>NovaTech</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-principal" id="navPrincipal">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="contacto.html" class="activo">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor pagina-interior">
+    <h1>Contáctanos</h1>
+
+    <!-- ===== TABLA COMPARATIVA ===== -->
+    <section class="seccion">
+      <h2>Comparativa rápida de productos</h2>
+      <div class="tabla-envoltorio">
+        <table class="tabla-comparativa">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Categoría</th>
+              <th>Batería</th>
+              <th>Garantía</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Producto">Audífonos Pro</td>
+              <td data-label="Categoría">Audio</td>
+              <td data-label="Batería">30 horas</td>
+              <td data-label="Garantía">12 meses</td>
+              <td data-label="Precio">S/ 249.00</td>
+            </tr>
+            <tr>
+              <td data-label="Producto">Teclado Mecánico X1</td>
+              <td data-label="Categoría">Periféricos</td>
+              <td data-label="Batería">Cableado</td>
+              <td data-label="Garantía">12 meses</td>
+              <td data-label="Precio">S/ 189.00</td>
+            </tr>
+            <tr>
+              <td data-label="Producto">SmartWatch X</td>
+              <td data-label="Categoría">Wearables</td>
+              <td data-label="Batería">7 días</td>
+              <td data-label="Garantía">12 meses</td>
+              <td data-label="Precio">S/ 329.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== SVG DECORATIVO ===== -->
+    <section class="seccion seccion-svg">
+      <svg class="icono-contacto" viewBox="0 0 100 100" width="70" height="70" role="img" aria-label="Ícono de sobre de correo">
+        <rect x="5" y="20" width="90" height="60" rx="6" fill="#1e2438" stroke="#e67e22" stroke-width="4"/>
+        <path d="M8 24 L50 55 L92 24" fill="none" stroke="#f6a621" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <p>¿Tienes dudas sobre un producto? Escríbenos y te respondemos en menos de 24 horas.</p>
+    </section>
+
+    <!-- ===== FORMULARIO ===== -->
+    <section class="seccion">
+      <h2>Formulario de contacto</h2>
+      <form class="formulario" id="formularioContacto" novalidate>
+
+        <div class="campo">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej. María Torres" required>
+        </div>
+
+        <div class="campo">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+        </div>
+
+        <div class="campo">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="999 999 999" pattern="[0-9]{9}">
+        </div>
+
+        <div class="campo">
+          <label for="motivo">Motivo de contacto</label>
+          <select id="motivo" name="motivo" required>
+            <option value="">Selecciona una opción</option>
+            <option value="consulta">Consulta sobre un producto</option>
+            <option value="soporte">Soporte técnico</option>
+            <option value="reclamo">Reclamo</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+
+        <fieldset class="campo">
+          <legend>¿Cómo prefieres que te contactemos?</legend>
+          <label class="opcion-radio">
+            <input type="radio" name="preferencia" value="correo" checked> Correo
+          </label>
+          <label class="opcion-radio">
+            <input type="radio" name="preferencia" value="telefono"> Teléfono
+          </label>
+        </fieldset>
+
+        <div class="campo campo-checkbox">
+          <label>
+            <input type="checkbox" id="suscripcion" name="suscripcion">
+            Deseo recibir novedades y promociones de NovaTech
+          </label>
+        </div>
+
+        <div class="campo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos en qué te ayudamos..." required></textarea>
+        </div>
+
+        <button type="submit" class="boton boton-primario">Enviar mensaje</button>
+
+        <p id="mensajeConfirmacion" class="mensaje-confirmacion" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="contenedor footer-contenido">
+      <p>&copy; 2026 NovaTech. Proyecto académico - Diseño Web.</p>
+      <nav class="footer-nav">
+        <a href="../index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
